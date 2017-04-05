@@ -1,0 +1,24 @@
+{
+  "name": "wechat-auto-reply",
+  "version": "1.0.0",
+  "description": "微信自动回复",
+  "main": "app.js",
+  "scripts": {
+    "start": "pm2 start process.json",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoeZheng2015/wechat-auto-reply.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JoeZheng2015/wechat-auto-reply/issues"
+  },
+  "homepage": "https://github.com/JoeZheng2015/wechat-auto-reply#readme",
+  "dependencies": {
+    "express": "^4.15.2",
+    "wechat": "^2.1.0"
+  }
+}
