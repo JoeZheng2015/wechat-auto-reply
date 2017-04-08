@@ -1,12 +1,29 @@
 const wechat = require('wechat')
 const express = require('express')
+const WechatApi = require('wechat-api')
 
-const app = express()
+const appid = 'wxb71708e8fc08e734'
+const appsecret = '1aba9b29319934a277ecafc7b5d338e2'
 const config = {
   token: 'wechat',
-  appid: 'wxb71708e8fc08e734',
+  appid,
   encodingAESKey: 'RSmS09Xf7H2MzxhoGehEkeqwbCUjJu1wjsuPmQk8P7V',
 };
+
+const app = express()
+const api = new WechatApi(appid, appsecret)
+const opts = {
+
+}
+const recervers = {
+
+}
+const callback = (err, result) => {
+  console.log('callback-', err, result)
+}
+// api.massSend(opts, recervers, callback)
+api.getGroups((err, result) => console.log('getGroups-', err, result))
+
 
 // 在微信公众平台的开发->基本配置->URL(服务器地址)下填入该url
 // eg:https://28718514.qcloud.la/wechat
@@ -55,6 +72,6 @@ app.use('/wechat', wechat(config, function (req, res, next) {
   }
 }));
 
-app.listen(80, () => {
+app.listen(8080, () => {
   console.log('服务已启动')
 })

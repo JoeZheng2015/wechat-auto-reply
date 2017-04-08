@@ -19,6 +19,7 @@
   "homepage": "https://github.com/JoeZheng2015/wechat-auto-reply#readme",
   "dependencies": {
     "express": "^4.15.2",
-    "wechat": "^2.1.0"
+    "wechat": "^2.1.0",
+    "wechat-api": "^1.32.0"
   }
 }
