@@ -1,19 +1,12 @@
 const wechat = require('wechat')
 const express = require('express')
-
-const appid = 'wxb71708e8fc08e734'
-const config = {
-  token: 'wechat',
-  appid,
-  encodingAESKey: 'RSmS09Xf7H2MzxhoGehEkeqwbCUjJu1wjsuPmQk8P7V',
-};
+const {WECHAT_CONFIG} = require('./utils/constants')
 
 const app = express()
 
-
 // 在微信公众平台的开发->基本配置->URL(服务器地址)下填入该url
 // eg:https://28718514.qcloud.la/wechat
-app.use('/wechat', wechat(config, function (req, res, next) {
+app.use('/wechat', wechat(WECHAT_CONFIG, function (req, res, next) {
   // 微信输入信息都在req.weixin上
   // req.weixin = {
   //  ToUserName,
