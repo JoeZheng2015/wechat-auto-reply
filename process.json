@@ -1,6 +1,6 @@
 {
     "name": "wechat-auto-reply",
-    "script": "app.js",
+    "script": "src/app.js",
     "cwd": "./",
     "exec_mode": "fork",
     "watch": true,
